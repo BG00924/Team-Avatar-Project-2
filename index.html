@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" integrity="sha512-8bKh9RpTTQf+EOCSqu/jiAhcUlb5BpcWy0eXEijSX7yode10sZLU3dLBcmoaj15chLpVb+/TY0Z6SL//d4lVAQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Game Search</title>
+</head>
+
+<body>
+    <header class="border-primary has-background-link-light">
+        <nav class="has-background-link-dark py-3">
+            <p class="has-text-centered is-size-1 has-text-light">Game Search</p>
+        </nav>
+    </header>
+    <main class="has-background-link-light px-3">
+        <!--Search Bar-->
+        <div class="columns border-primary my-3">
+            <div class="column is-full">
+                <div class="columns py-3 has-background-link-dark mediaSpace">
+                    <!-- Search text -->
+                    <div class="column is-one-fifth is-full-mobile gap-primary">
+                        <p class="is-size-4 has-text-weight-bold has-text-light">Search:
+                        </p>
+                    </div>
+                   <!-- Input for game name -->
+                    <input type="text" value="" name="searchInput" id="search-Input" autofocus="true" class="column is-one-quarter is-full-mobile gap-primary searchSpace">
+                    </input>
+                    <!-- Drop down menu for platform selection -->
+                    <select id="platform-dropdown" name="platformtype" class="column is-one-quarter is-full-mobile gap-primary searchSpace">
+                        <option value="" disabled selected>Pick a platform</option>
+                        <option value="pc">PC</option>
+                        <option value="playstation-4">PS4</option>
+                        <option value="xone">Xbox</option>
+                        <option value="switch">Switch</option>
+                    </select>
+                    <button type="submit" id="gamesubmit" class="column is-1 gap-primary button is-link is-light is-full-mobile button-height">Submit</button>
+                </div>
+            </div>
+        </div>
+        <!-- Game information section -->
+        <div class="columns border-primary my-3 has-background-link-dark">
+            <div class="column is-full">
+                <div class="columns">
+                    <!-- Provides information about the game -->
+                    <div class="column has-text-black">
+                        <p class="border-secondary my-2 has-background-link-light px-1 py-1">Name: <span id="name"></span></p>
+                        <p class="border-secondary my-2 has-background-link-light px-1 py-1">Platform: <span id="platform"></span></p>
+                        <p class="border-secondary my-2 has-background-link-light px-1 py-1">Genre: <span id="genre"></span></p>
+                        <p class="border-secondary my-2 has-background-link-light px-1 py-1">Score: <span id="score"></span></p>
+                        <p class="border-secondary my-2 has-background-link-light px-1 py-1">Description: <span id="description"></span></p>
+                    </div>
+                    <!-- Game image -->
+                    <img class="column border-secondary my-3 mr-1 has-background-link-light imageSpace" id="gameimage"></img>
+                </div>
+            </div>
+        </div>
+        <!-- Game video section -->
+        <div class="columns border-primary my-3 has-background-link-dark">
+            <div class="column is-full"> 
+                <!-- Video title sction -->
+                <div class="columns is-centered">
+                    <div class="has-text-weight-bold has-text-black has-text-centered column border-secondary mx-2 my-2 is-half has-background-link-light">
+                        Video
+                    </div>
+                </div>
+                <!-- Game video -->
+                <div class="columns is-centered">
+                    <div class="border-secondary column is-four-fifths mx-2 my-2 has-background-link-light"> 
+                        <div class="columns is-centered">
+                            <div id="youtube" class="column youtube border-tertiary is-centered">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <footer class="border-primary has-background-link-dark has-text-centered has-text-weight-bold is-size-4 has-text-light">
+        Enjoy your game! 
+    </footer>
+
+    <!-- this is modal -->
+
+    <div class="modal" id="modalEdicion">
+        <div onclick="refs.modalEdicion.close()" class="modal-background"></div>
+        <div class="modal-content has-background-link has-text-white is-size-1 has-text-centered has-text-weight-bold">
+            Error! Try Again!
+        </div>
+        <button class="modal-close is-large" aria-label="close" onclick="refs.modalEdicion.close()"></button>
+    </div>
+
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="./assets/js/index.js"></script>
+</body>
+</html>
