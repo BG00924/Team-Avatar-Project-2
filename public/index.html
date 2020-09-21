@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" integrity="sha512-8bKh9RpTTQf+EOCSqu/jiAhcUlb5BpcWy0eXEijSX7yode10sZLU3dLBcmoaj15chLpVb+/TY0Z6SL//d4lVAQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Game Search</title>
@@ -24,7 +26,7 @@
                         <p class="is-size-4 has-text-weight-bold has-text-light">Search:
                         </p>
                     </div>
-                   <!-- Input for game name -->
+                    <!-- Input for game name -->
                     <input type="text" value="" name="searchInput" id="search-Input" autofocus="true" class="column is-one-quarter is-full-mobile gap-primary searchSpace">
                     </input>
                     <!-- Drop down menu for platform selection -->
@@ -58,7 +60,7 @@
         </div>
         <!-- Game video section -->
         <div class="columns border-primary my-3 has-background-link-dark">
-            <div class="column is-full"> 
+            <div class="column is-full">
                 <!-- Video title sction -->
                 <div class="columns is-centered">
                     <div class="has-text-weight-bold has-text-black has-text-centered column border-secondary mx-2 my-2 is-half has-background-link-light">
@@ -67,7 +69,7 @@
                 </div>
                 <!-- Game video -->
                 <div class="columns is-centered">
-                    <div class="border-secondary column is-four-fifths mx-2 my-2 has-background-link-light"> 
+                    <div class="border-secondary column is-four-fifths mx-2 my-2 has-background-link-light">
                         <div class="columns is-centered">
                             <div id="youtube" class="column youtube border-tertiary is-centered">
                             </div>
@@ -75,25 +77,26 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </main>
     <footer class="border-primary has-background-link-dark has-text-centered has-text-weight-bold is-size-4 has-text-light">
-        Enjoy your game! 
+        Enjoy your game!
     </footer>
 
     <!-- this is modal -->
 
     <div class="modal" id="modalEdicion">
-        <div onclick="refs.modalEdicion.close()" class="modal-background"></div>
+        <div class="modal-background closeModal"></div>
         <div class="modal-content has-background-link has-text-white is-size-1 has-text-centered has-text-weight-bold">
             Error! Try Again!
         </div>
-        <button class="modal-close is-large" aria-label="close" onclick="refs.modalEdicion.close()"></button>
+        <button class="modal-close is-large closeModal"></button>
     </div>
 
-<script src="https://apis.google.com/js/api.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="./assets/js/index.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
+
 </html>
