@@ -1,17 +1,16 @@
 # **Game Search**
 
-**Creators:**
+**Brought to You By**
 
->  [Blake Gale](https://github.com/BG00924) *`The Vendor of Databases`*
+  [Blake Gale](https://github.com/BG00924) *`The Vendor of Databases`*
 
->  [Chelsey Masood](https://github.com/devgirl221) *`The Bender of RESTful APIs & Deployment`*
+  [Chelsey Masood](https://github.com/devgirl221) *`The Bender of RESTful APIs & Deployment`*
 
->  [Andre Mayberry](https://github.com/Andre835) *`The Master of Retrieving & Adding New Data`*
+  [Andre Mayberry](https://github.com/Andre835) *`The Master of Retrieving & Adding New Data`*
 
->  [Rawnie Coquat](https://github.com/RawnieCole) *`The Bender of Template Engines and Authentication`*
+  [Rawnie Coquat](https://github.com/RawnieCole) *`The Bender of Template Engines and Authentication`*
 
 ---
-
 ### **Table of Contents**
   [Description](#description)
 
@@ -23,16 +22,14 @@
 
 ---
  ## **Description**
->  An Application that Enables the User to Search for Video Game Recommendations Based Off of Several User's Selections.
+>  An Application Created to Solve Your Gaming Questions About Video Games You Have Yet to Try!
+>  Game Search Allows Users to Search for Video Game Recommendations by Inputing a Game Title and Platform. In Return, the User is Presented with that Game's Available Platform(s), Genre(s), Popularity Score(s), a Brief Description, and a Selection of YouTube Videos in Reference to the Game. 
+>  Additionally, Users Have the Option to Log-In and Save Previous Searches, Rate Games, View Most Viewed Games by Other Users, and View User Game Ratings. 
 
->  The User will be Able to Search for Games by Platform. This will Return with Video Game Information Such as Name, Platform, Genre, Score and a Brief Description. 
-> 
-
- ***[Team Avatar!](https://bg00924.github.io/Team-Avatar-project-1/)***
+ ***[Game Search!](https://bg00924.github.io/Team-Avatar-project-1/)***
 
 ---
  ## **Screenshots**
-
 ![Overview of Game Search](./assets/images/avatar.jpg)
 ![Overview of Game Search](./assets/images/avatar2.jpg)
 
