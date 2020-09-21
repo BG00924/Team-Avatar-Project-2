@@ -23,10 +23,12 @@
 ---
  ## **Description**
 >  An Application Created to Solve Your Gaming Questions About Video Games You Have Yet to Try!
+>
 >  Game Search Allows Users to Search for Video Game Recommendations by Inputing a Game Title and Platform. In Return, the User is Presented with that Game's Available Platform(s), Genre(s), Popularity Score(s), a Brief Description, and a Selection of YouTube Videos in Reference to the Game. 
+>
 >  Additionally, Users Have the Option to Log-In and Save Previous Searches, Rate Games, View Most Viewed Games by Other Users, and View User Game Ratings. 
 
- ***[Game Search!](https://bg00924.github.io/Team-Avatar-project-1/)***
+### ***[Game Search!](https://bg00924.github.io/Team-Avatar-project-1/)***
 
 ---
  ## **Screenshots**
@@ -44,7 +46,15 @@
 
 ---
  ## **Future Development**
->  * Version 1 is an MVP with basic functionality.
+>  Team Avatar's Envision Begins with the Following:
+>  *  Expand the Functionality Available Through the User's Account
+>      *  Chat Function
+>      *  Comments
+>      *  Forums
+>  *  Add Additional Video Sections and Criteria to Allow
+>      *  General Videos
+>      *  Gameplay
+>      *  Walkthrough
+>  *  Expanding to Account for Data Pull from Multiple Locations that Allow a Side-By-Side Comparison of the Game from Different Sources.
 
    *[Back to Top](#game-search)*
-
