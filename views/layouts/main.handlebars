@@ -5,21 +5,23 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" integrity="sha512-8bKh9RpTTQf+EOCSqu/jiAhcUlb5BpcWy0eXEijSX7yode10sZLU3dLBcmoaj15chLpVb+/TY0Z6SL//d4lVAQ==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Game Search</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
+    <div>
+        <header class="border-primary has-background-link-light">
             <nav class="has-background-link-dark py-3">
                 <p class="has-text-centered is-size-1 has-text-light">Game Search</p>
+                <div class="has-text-right pr-6 has-text-light">
                 {{#if loggedIn}}
-                    <a href="/dashboard">dashboard</a>
-                    <button id="logout" class="btn-no-style">logout</button>
-                    {{else}}
-                    <a href="/login">login</a>
+                <a href="/mygames">My Games</a>
+                <button id="logout" class="btn-no-style">Logout</button>
+                {{else}}
+                <a href="/login">Login</a>
                 {{/if}}
+                </div>
             </nav>
         </header>
         <main>
@@ -41,6 +43,10 @@
     {{#if loggedIn}}
         <script src="/javascript/logout.js"></script>
     {{/if}}
+
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
 </body>
 
 </html>

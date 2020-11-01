@@ -6,7 +6,7 @@ async function loginFormHandler(event) {
   
     if (email && password) {
       const response = await fetch('/api/users/login', {
-        method: 'post',
+        method: 'POST',
         body: JSON.stringify({
           email,
           password
@@ -15,7 +15,7 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard/');
+        document.location.replace('mygames');
       } else {
         alert(response.statusText);
       }
@@ -31,7 +31,7 @@ async function loginFormHandler(event) {
   
     if (username && email && password) {
       const response = await fetch('/api/users', {
-        method: 'post',
+        method: 'POST',
         body: JSON.stringify({
           username,
           email,
@@ -41,14 +41,14 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard/');
+        document.location.replace('mygames');
       } else {
         alert(response.statusText);
       }
     }
   }
   
-  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+  document.querySelector('#login-btn').addEventListener('click', loginFormHandler);
   
-  document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+  document.querySelector('#signup-btn').addEventListener('click', signupFormHandler);
   

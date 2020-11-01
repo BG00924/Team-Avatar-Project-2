@@ -1,0 +1,62 @@
+body {
+    min-height: 100vh;
+}
+
+.border-primary {
+    border: 5px solid black;
+}
+
+.border-secondary {
+    border: 3px solid black;
+}
+
+.border-tertiary {
+    border: 1px solid black;
+}
+
+.gap-primary {
+    margin: 0 3px 0 3px;
+}
+
+.button-height {
+    height: auto;
+}
+
+.youtube {
+    width: 560px;
+    min-height: 340px;
+    border: none;
+}
+
+.youtubeVid {
+    width: 560px;
+    height: 340px;
+    margin: 0 auto;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .mediaSpace {
+        padding: 0.75rem;
+    }
+
+    .imageSpace {
+        margin: 0.75rem;
+        flex: none;
+        width: calc(100% - 1.5rem);
+    }
+
+    .searchSpace {
+        margin-bottom: 0.5rem;
+    }
+
+    .youtube {
+        width: calc(100% - 1.5rem);
+        min-height: 212px;
+    }
+
+    .youtubeVid {
+        width: calc(100% - 1.5rem);
+        height: 212px;
+    }
+}

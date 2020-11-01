@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 const { Game, User, Vote } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, (req, res) => {
+router.get('/mygames', withAuth, (req, res) => {
     console.log(req.session)
     console.log('---------------')
     Game.findAll({
@@ -25,7 +25,7 @@ router.get('/', withAuth, (req, res) => {
     })
         .then(dbGameData => {
             const games = dbGameData.map(game => game.get({ plain: true}))
-            res.render('dashboard', { games, loggedIn: true})
+            res.render('mygames', { games, loggedIn: true})
         })
         .catch(err => {
             console.log(err)
