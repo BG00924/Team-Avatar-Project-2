@@ -72,7 +72,7 @@ router.post('/', (req, res) => {
         genre: req.body.genre,
         score: req.body.score,
         description: req.body.description,
-        user_id: req.sesson.user_id
+        user_id: req.session.user_id
     })
         .then(dbGameData => res.json(dbGameData))
         .catch(err => {

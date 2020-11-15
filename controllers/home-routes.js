@@ -30,21 +30,21 @@ router.get('/login', (req, res) => {
           where: {
               user_id: req.session.user_id
           },
-          attributes: [
-              'id',
-              'title',
-              'genre',
-              'score',
-              'description',
-              'user_id'
-              [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
-          ],
-          include: [
-              {
-                  model: User,
-                  attributes: ['username']
-              }
-          ]
+        //   attributes: [
+        //       'id',
+        //       'title',
+        //       'genre',
+        //       'score',
+        //       'description',
+        //       'user_id'
+        //       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
+        //   ],
+        //   include: [
+        //       {
+        //           model: User,
+        //           attributes: ['username']
+        //       }
+        //   ]
       })
           .then(dbGameData => {
               const games = dbGameData.map(game => game.get({ plain: true}))

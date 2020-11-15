@@ -9,21 +9,23 @@
         </div>
         <!-- Game information section -->
         <div class="columns border-primary my-3 has-background-link-dark">
-            <div class="column is-full">
-              {{#if games.length}}
-                <div class="columns is-half is-multiline">
+            <div class="column is-full is-multiline">
+              <div class="columns is-half is-multiline">
+                {{#if games.length}}
                   {{#each games as |game|}}
                     <!-- Game image -->
                     {{!-- <img style="width:10%" class="column border-secondary my-3 mr-1 has-background-link-light imageSpace" id="gameimage"></img> --}}
                     <!-- Provides information about the game -->
-                    <div class="column has-text-black">
-                        <h1 class="border-secondary my-2 has-background-link-light px-1 py-1">{{title}}</h1>
-                        <p class="border-secondary my-2 has-background-link-light px-1 py-1">Number of votes: <span id="votes"></span></p>
-                        <button class="button is-rounded is-link is-inverted" type="submit" id="vote-btn">Upvote!</button>
+                    <div class="column is-half has-text-black" id={{id}}>
+                        <h1 class="border-secondary my-2 has-background-link-light px-1 py-1"> Title: {{title}}</h1>
+                        <p class="border-secondary my-2 has-background-link-light px-1 py-1"> Genre: {{genre}}</p>
+                        <p class="border-secondary my-2 has-background-link-light px-1 py-1"> Score: {{score}}</p>
+                        <p class="border-secondary my-2 has-background-link-light px-1 py-1"> Description: {{description}}</p>
+                        <button class="button is-rounded is-link is-inverted" type="submit" id="delete-btn">Delete Game</button>
                     </div>
-                  {{/each}}  
-                </div>
-              {{/if}}
+                  {{/each}} 
+                {{/if}}
+              </div>
             </div>
         </div>
 

@@ -79,10 +79,10 @@ var saveSubmitHandler = function(event) {
 
     // console.log(Session)
 
-    var title = nameEl.value
-    var genre = genreEl.value
-    var score = scoreEl.value
-    var description = descriptionEl.value
+    var title = nameEl.textContent
+    var genre = genreEl.textContent
+    var score = scoreEl.textContent
+    var description = descriptionEl.textContent
     // var user_id = req.session.user_id
 
     fetch(`/api/games/`, {
