@@ -16,10 +16,12 @@
                 <p class="has-text-centered is-size-1 has-text-light">Game Search</p>
                 <div class="has-text-right pr-6 has-text-light">
                 {{#if loggedIn}}
-                <a href="/mygames">My Games</a>
-                <button id="logout" class="btn-no-style">Logout</button>
+                <a href="/" class="has-text-light">Home</a>
+                <a href="/mygames" class="has-text-light pl-3">My Games</a>
+                <a href="/" id="logout" class="pl-3 has-text-light">Logout</button>
                 {{else}}
-                <a href="/login">Login</a>
+                <a href="/login" class="has-text-light">Login</a>
+                <a href="/mygames" class="has-text-light pl-3">My Games</a>
                 {{/if}}
                 </div>
             </nav>

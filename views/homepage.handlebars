@@ -10,15 +10,8 @@
                    <!-- Input for game name -->
                     <input type="text" value="" name="searchInput" id="search-Input" autofocus="true" class="column is-one-quarter is-full-mobile gap-primary searchSpace">
                     </input>
-                    <!-- Drop down menu for platform selection -->
-                    <select id="platform-dropdown" name="platformtype" class="column is-one-quarter is-full-mobile gap-primary searchSpace">
-                        <option value="" disabled selected>Pick a platform</option>
-                        <option value="pc">PC</option>
-                        <option value="playstation-4">PS4</option>
-                        <option value="xone">Xbox</option>
-                        <option value="switch">Switch</option>
-                    </select>
                     <button type="submit" id="gamesubmit" class="column is-1 gap-primary button is-link is-light is-full-mobile button-height">Submit</button>
+                    <button type="submit" id="gamesave" class="column is-1 gap-primary button is-link is-light is-full-mobile button-height">Save</button>
                 </div>
             </div>
         </div>
@@ -29,13 +22,12 @@
                     <!-- Provides information about the game -->
                     <div class="column has-text-black">
                         <p class="border-secondary my-2 has-background-link-light px-1 py-1">Name: <span id="name"></span></p>
-                        <p class="border-secondary my-2 has-background-link-light px-1 py-1">Platform: <span id="platform"></span></p>
                         <p class="border-secondary my-2 has-background-link-light px-1 py-1">Genre: <span id="genre"></span></p>
                         <p class="border-secondary my-2 has-background-link-light px-1 py-1">Score: <span id="score"></span></p>
                         <p class="border-secondary my-2 has-background-link-light px-1 py-1">Description: <span id="description"></span></p>
                     </div>
                     <!-- Game image -->
-                    <img class="column border-secondary my-3 mr-1 has-background-link-light imageSpace" id="gameimage"></img>
+                    <img class="column border-secondary my-3 mr-1 has-background-link-light imageSpace" id="gameimage" style="width:40%"></img>
                 </div>
             </div>
         </div>
@@ -43,7 +35,7 @@
         <div class="columns border-primary my-3 has-background-link-dark">
             <div class="column is-full"> 
                 <!-- Video title sction -->
-                <div class="columns is-left">
+                <div class="columns is-centered">
                     <div class="has-text-weight-bold has-text-black has-text-centered column border-secondary mx-2 my-2 is-half has-background-link-light">
                         Video
                     </div>
@@ -52,8 +44,9 @@
                 <div class="columns is-centered">
                     <div class="border-secondary column is-four-fifths mx-2 my-2 has-background-link-light"> 
                         <div class="columns is-centered">
-                            <div id="youtube" class="column youtube border-tertiary is-centered">
-                            </div>
+                            <video width="480" height="320" controls="controls" id="youtube" class="column youtube border-tertiary is-centered">
+                                {{!-- <source src="" type="video/mp4" id="video"> --}}
+                            </video>
                         </div>
                     </div>
                 </div>

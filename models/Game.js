@@ -14,7 +14,10 @@ class Game extends Model {
                 attributes: [
                     'id',
                     'title',
-                    'platform',
+                    'genre',
+                    'score',
+                    'description',
+                    'user_id'
                     [
                         sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'),
                         'vote_count'
@@ -37,7 +40,15 @@ Game.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        platform: {
+        genre: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        score: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        description: {
             type: DataTypes.STRING,
             allowNull: false
         },

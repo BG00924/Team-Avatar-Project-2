@@ -1,26 +1,4 @@
-        <div class="columns border-primary my-3">
-            <div class="column is-full">
-                <div class="columns py-3 has-background-link-dark mediaSpace">
-                    <!-- Search text -->
-                    <div class="column is-one-fifth is-full-mobile gap-primary">
-                        <p class="is-size-4 has-text-weight-bold has-text-light">Save:
-                        </p>
-                    </div>
-                   <!-- Input for game name -->
-                    <input type="text" value="" name="saveInput" id="save-Input" autofocus="true" class="column is-one-quarter is-full-mobile gap-primary searchSpace">
-                    </input>
-                    <!-- Drop down menu for platform selection -->
-                    <select id="platform-dropdown" name="platformtype" class="column is-one-quarter is-full-mobile gap-primary searchSpace">
-                        <option value="" disabled selected>Pick a platform</option>
-                        <option value="pc">PC</option>
-                        <option value="playstation-4">PS4</option>
-                        <option value="xone">Xbox</option>
-                        <option value="switch">Switch</option>
-                    </select>
-                    <button type="submit" id="savesubmit" class="column is-1 gap-primary button is-link is-light is-full-mobile button-height">Save</button>
-                </div>
-            </div>
-        </div>
+        
         <!--Search Bar-->
         <div class="columns  has-background-link-dark border-primary my-3">
             <div class="column is-full">
@@ -36,9 +14,10 @@
                 <div class="columns is-half is-multiline">
                   {{#each games as |game|}}
                     <!-- Game image -->
-                    <img class="column border-secondary my-3 mr-1 has-background-link-light imageSpace" id="gameimage"></img>
+                    {{!-- <img style="width:10%" class="column border-secondary my-3 mr-1 has-background-link-light imageSpace" id="gameimage"></img> --}}
                     <!-- Provides information about the game -->
                     <div class="column has-text-black">
+                        <h1 class="border-secondary my-2 has-background-link-light px-1 py-1">{{title}}</h1>
                         <p class="border-secondary my-2 has-background-link-light px-1 py-1">Number of votes: <span id="votes"></span></p>
                         <button class="button is-rounded is-link is-inverted" type="submit" id="vote-btn">Upvote!</button>
                     </div>

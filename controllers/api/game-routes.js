@@ -1,20 +1,27 @@
 const router = require('express').Router();
 const { Game, User, Vote } = require('../../models');
 const sequelize = require('../../config/connection');
+const withAuth = require('../../utils/auth');
 
-router.get('/', (req, res) => {
-    console.log('===========')
+router.get('/', withAuth, (req, res) => {
+    console.log('yoooo')
     Game.findAll({
+        where: {
+            user_id: req.session.user_id
+        },
         attributes: [
             'id', 
             'title', 
-            'platform', 
+            'genre',
+            'score',
+            'description',
+            'user_id' 
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
         ],
         include: [
             {
                 model: User,
-                attributes:['username']
+                attributes:['id', 'username']
             }
         ]
     })
@@ -33,7 +40,10 @@ router.get('/:id', (req, res) => {
         attributes: [
             'id', 
             'title', 
-            'platform', 
+            'genre',
+            'score',
+            'description',
+            'user_id' 
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
         ],
         include: [
@@ -59,8 +69,10 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     Game.create({
         title: req.body.title,
-        platform: req.body.platform,
-        user_id: req.body.user_id
+        genre: req.body.genre,
+        score: req.body.score,
+        description: req.body.description,
+        user_id: req.sesson.user_id
     })
         .then(dbGameData => res.json(dbGameData))
         .catch(err => {

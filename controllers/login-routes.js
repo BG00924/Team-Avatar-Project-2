@@ -13,7 +13,10 @@ router.get('/mygames', withAuth, (req, res) => {
         attributes: [
             'id',
             'title',
-            'platform',
+            'genre',
+            'score',
+            'description',
+            'user_id'
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
         ],
         include: [
