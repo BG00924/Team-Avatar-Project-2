@@ -1,0 +1,32 @@
+        
+        <!--Search Bar-->
+        <div class="columns  has-background-link-dark border-primary my-3" onclick="event.preventDefault(); event.stopPropagation()">
+            <div class="column is-full">
+                <div class="py-3 has-background-link-dark mediaSpace">
+                  <p class="is-size-4 has-text-weight-bold has-text-light"> Previous Searches:</p>
+                </div>
+            </div>
+        </div>
+        <!-- Game information section -->
+        <div class="columns border-primary my-3 has-background-link-dark" onclick="event.preventDefault(); event.stopPropagation()">
+            <div class="column is-full is-multiline">
+              <div class="columns is-half is-multiline">
+                {{#if games.length}}
+                  {{#each games as |game|}}
+                    <!-- Game image -->
+                    {{!-- <img style="width:10%" class="column border-secondary my-3 mr-1 has-background-link-light imageSpace" id="gameimage"></img> --}}
+                    <!-- Provides information about the game -->
+                    <div class="column is-half has-text-black" id={{id}}>
+                        <h1 class="border-secondary my-2 has-background-link-light px-1 py-1"> Title: {{title}}</h1>
+                        <p class="border-secondary my-2 has-background-link-light px-1 py-1"> Genre: {{genre}}</p>
+                        <p class="border-secondary my-2 has-background-link-light px-1 py-1"> Score: {{score}}</p>
+                        <p class="border-secondary my-2 has-background-link-light px-1 py-1"> Description: {{description}}</p>
+                        <button class="button is-rounded is-link is-inverted delete-btn">Delete Game</button>
+                    </div>
+                  {{/each}} 
+                {{/if}}
+              </div>
+            </div>
+        </div>
+
+        <script src="/javascript/mygames.js"></script>

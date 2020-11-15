@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" integrity="sha512-8bKh9RpTTQf+EOCSqu/jiAhcUlb5BpcWy0eXEijSX7yode10sZLU3dLBcmoaj15chLpVb+/TY0Z6SL//d4lVAQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Game Search</title>
+</head>
+
+<body>
+    <div>
+        <header class="border-primary has-background-link-dark">
+            <nav class="has-background-link-dark py-3">
+                <p class="has-text-centered is-size-1 has-text-light">Game Search</p>
+                <div class="has-text-right pr-6 has-text-light">
+                {{#if loggedIn}}
+                <a href="/" class="has-text-light">Home</a>
+                <a href="/mygames" class="has-text-light pl-3">My Games</a>
+                <a href="/" id="logout" class="pl-3 has-text-light">Logout</button>
+                {{else}}
+                <a href="/login" class="has-text-light">Login</a>
+                <a href="/mygames" class="has-text-light pl-3">My Games</a>
+                {{/if}}
+                </div>
+            </nav>
+        </header>
+        <main>
+            {{{ body }}}
+        </main>
+        <footer class="border-primary has-background-link-dark has-text-centered has-text-weight-bold is-size-4 has-text-light">
+            Enjoy your game!
+        </footer>
+    </div>
+
+    <div class="modal" id="modalEdicion">
+        <div onclick="refs.modalEdicion.close()" class="modal-background"></div>
+        <div class="modal-content has-background-link has-text-white is-size-1 has-text-centered has-text-weight-bold">
+            Error! Try Again!
+        </div>
+        <button class="modal-close is-large" aria-label="close" onclick="refs.modalEdicion.close()"></button>
+    </div>
+
+    {{#if loggedIn}}
+        <script src="/javascript/logout.js"></script>
+    {{/if}}
+
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</body>
+
+</html>
